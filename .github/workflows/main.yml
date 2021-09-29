@@ -1,0 +1,19 @@
+name: Gatsby Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish
+        run: |
+          git config user.email ${{github.actor}}@users.noreply.github.com
+          git config user.name ${{github.actor}}
+          npm install
+          npx gatsby build
+          npx gh-pages -d public -b main https://${{ secrets.GP_TOKEN }}@github.com/${{ github.repository }}
