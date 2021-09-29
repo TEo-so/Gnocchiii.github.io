@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Publish
-        run: |
-          npm install
-          npx gatsby build
-          npx gh-pages -d public -b main https://${{ secrets.GP_TOKEN }}@github.com/${{ github.repository }}
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.GP_TOKEN }}
