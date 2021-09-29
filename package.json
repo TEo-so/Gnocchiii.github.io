@@ -7,7 +7,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master"
   },
   "license": "0BSD",
   "dependencies": {
