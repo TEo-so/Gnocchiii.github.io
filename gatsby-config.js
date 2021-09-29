@@ -2,17 +2,13 @@ module.exports = {
   // Customize your site metadata:
   pathPrefix: `/`,
   siteMetadata: {
-    title: `My Blog Title`,
-    author: `My Name`,
-    description: `My site description...`,
+    title: `My Blog`,
+    author: `Gnocchiii`,
+    description: `存放个人博客和笔记`,
     social: [
       {
-        name: `twitter`,
-        url: `https://twitter.com/gatsbyjs`,
-      },
-      {
         name: `github`,
-        url: `https://github.com/gatsbyjs`,
+        url: `https://github.com/Gnocchiii`,
       },
     ],
   },
