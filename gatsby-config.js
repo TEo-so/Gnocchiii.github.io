@@ -1,5 +1,6 @@
 module.exports = {
   // Customize your site metadata:
+  pathPrefix: `/`,
   siteMetadata: {
     title: `My Blog Title`,
     author: `My Name`,
@@ -18,7 +19,9 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
-      options: {},
+      options: {
+         basePath: `/`,
+      },
     },
   ],
 }
